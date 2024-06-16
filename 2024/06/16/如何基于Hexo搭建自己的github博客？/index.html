@@ -25,11 +25,14 @@
 <meta property="og:site_name" content="Chandery&#39;s Blog">
 <meta property="og:description" content="Hexo是什么？Hexo是一个快速、简洁且高效的博客框架，尤其对于新手十分友好，其实没有前端能力也可以随心、快速地搭建自己的博客网站。如果这些描述不够直观，我将展示示例博客。  示例展示  示例博客中的所有内容都是使用Hexo搭建，使用的主题是Redefine 这里奉上Hexo官方网站 。 安装前置在安装Hexo之前我们需要先配好下列环境：  Node.js  (Node.js 版本需不低于 10">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png">
+<meta property="og:image" content="https://postimage.me/images/2024/06/16/imagedd4a06cbebeedc6a.png">
 <meta property="article:published_time" content="2024-06-16T09:21:40.000Z">
-<meta property="article:modified_time" content="2024-06-16T09:55:59.852Z">
+<meta property="article:modified_time" content="2024-06-16T10:33:07.761Z">
 <meta property="article:author" content="Chandery">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png">
     
     
     <!--- Icon Part-->
@@ -659,8 +662,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-16 17:55:59</span>
-            <span class="mobile">2024-06-16 17:55:59</span>
+            <span class="desktop">2024-06-16 18:33:07</span>
+            <span class="mobile">2024-06-16 18:33:07</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -682,12 +685,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>266 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>788 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -715,12 +718,58 @@
 <p>安装方式和过程在不同的操作系统上是不同的，在此就不赘述了。读者可以自行查阅对应操作系统的资料。</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>必备的环境配置结束之后即可使用npm安装Hexo</p>
 <p>在终端输入下列代码以安装Hexo</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
 
 
 
 <h2 id="建立本地仓库和Github仓库"><a href="#建立本地仓库和Github仓库" class="headerlink" title="建立本地仓库和Github仓库"></a>建立本地仓库和Github仓库</h2><p>这里解释一下本地仓库和Github仓库的作用</p>
-<div class="tabs" id="tab-页面内不重复的id"><ul class="nav-tabs"></ul><div class="tab-content"></div></div>
+<p>本地仓库是用来存放Hexo相关的源文件（如js脚本、后续主题的源文件包、模块包之类的）</p>
+<p>Github仓库里的内容即博客网站的Html、css、js源文件，是经过用户配置后的Hexo生成出来的</p>
+<p>下面是仓库建立步骤</p>
+<div class="tabs" id="tab-local-and-github"><ul class="nav-tabs"><li class="tab active"><a class="#local-and-github-1">Github仓库</a></li><li class="tab"><a class="#local-and-github-2">本地仓库</a></li></ul><div class="tab-content"><div class="tab-pane active" id="local-and-github-1"><p>在个人的github中新建仓库，命名必须按一下格式</p>
+  <div class="note p-4 mb-4 rounded-small info">
+    <p>{username}.github.io</p>
+
+  </div>
+
+<p>后续仓库建立之后，直接访问{username}.github.io即可访问个人博客。</p>
+<p><em>当然也可以使用域名绑定，这个后面再说</em></p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png"
+                      style="zoom:80%;" 
+                >
+
+<p>创建成功之后点击“code”，选择”HTTPS”或者“SSH”都可以，但是要注意的是使用SSH与github进行通信需要配置ssh-key，这个在这里就不过多赘述了，不清楚的读者可以通过SEARCH解决。</p>
+<p>复制这个地址，后续在本地仓库配置中使用。</p></div><div class="tab-pane" id="local-and-github-2"><p>在本地目录下新建一个文件夹，在文件夹下打开终端，初始化Hexo</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></div>
+
+<p>Hexo会自动生成相应的配置文件：</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/16/imagedd4a06cbebeedc6a.png"
+                      style="zoom: 80%;" 
+                >
+
+<p>其中在使用时需要修改的是</p>
+<ul>
+<li>_config.yml  用于基本的设置</li>
+<li>_config.{themes}.yml 后续选择主题后得到的针对主题的设置</li>
+<li>source文件夹中的文件，用于发布博客、上传图片等</li>
+<li>scaffolds文件夹中的模板文件，用于自定义新建的不同类型的文件的模板</li>
+</ul>
+<p>node_modules文件夹中存放着下载的模块</p>
+<p>public文件夹中是当前状态下hexo会生成的各类文件，即使修改，在下一次hexo生成中也会被覆盖掉</p>
+<p>然后打开_config.yml，我们需要进行一些基本的配置，详细的介绍可以参考Hexo的官方文档<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration" >配置 | Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<p>为了能够我们建立的github仓库连接，我们需要使用deploy，使用下列指令进行安装：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
+
+<p>然后在_config.yml的最后添加这样的代码：</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment"># git@github.com:Chandery/chandery.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
+
+<p>即可实现与github的信息通信</p></div></div></div>
 
 
 
@@ -738,7 +787,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-16 17:55:59
+                    :</strong> 2024-06-16 18:33:07
             </li>
         
         <li>
