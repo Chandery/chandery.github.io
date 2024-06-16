@@ -18,13 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="article">
+        <meta name="description" content="Hexo是什么？Hexo是一个快速、简洁且高效的博客框架，尤其对于新手十分友好，其实没有前端能力也可以随心、快速地搭建自己的博客网站。如果这些描述不够直观，我将展示示例博客。  示例展示  示例博客中的所有内容都是使用Hexo搭建，使用的主题是Redefine 这里奉上Hexo官方网站 。 安装前置在安装Hexo之前我们需要先配好下列环境：  Node.js  (Node.js 版本需不低于 10">
+<meta property="og:type" content="article">
 <meta property="og:title" content="如何基于Hexo搭建自己的github博客？">
 <meta property="og:url" content="https://chandery.github.io/2024/06/16/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2%EF%BC%9F/index.html">
 <meta property="og:site_name" content="Chandery&#39;s Blog">
+<meta property="og:description" content="Hexo是什么？Hexo是一个快速、简洁且高效的博客框架，尤其对于新手十分友好，其实没有前端能力也可以随心、快速地搭建自己的博客网站。如果这些描述不够直观，我将展示示例博客。  示例展示  示例博客中的所有内容都是使用Hexo搭建，使用的主题是Redefine 这里奉上Hexo官方网站 。 安装前置在安装Hexo之前我们需要先配好下列环境：  Node.js  (Node.js 版本需不低于 10">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-16T09:21:40.000Z">
-<meta property="article:modified_time" content="2024-06-16T09:26:29.594Z">
+<meta property="article:modified_time" content="2024-06-16T09:55:59.852Z">
 <meta property="article:author" content="Chandery">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
@@ -657,8 +659,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-16 17:26:29</span>
-            <span class="mobile">2024-06-16 17:26:29</span>
+            <span class="desktop">2024-06-16 17:55:59</span>
+            <span class="mobile">2024-06-16 17:55:59</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -679,6 +681,10 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>266 Words</span>
+        </span>
+    
     
         <span class="article-min2read article-meta-item">
             <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
@@ -696,7 +702,29 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            
+            <h2 id="Hexo是什么？"><a href="#Hexo是什么？" class="headerlink" title="Hexo是什么？"></a>Hexo是什么？</h2><p>Hexo是一个快速、简洁且高效的博客框架，尤其对于新手十分友好，其实没有前端能力也可以随心、快速地搭建自己的博客网站。如果这些描述不够直观，我将展示示例博客。</p>
+<a class="button  center large" target="_blank" rel="noopener" href='https://chandery.chat/' title='示例展示'><i class='fa-solid fa-binoculars'></i> 示例展示</a>
+
+<p>示例博客中的所有内容都是使用Hexo搭建，使用的主题是Redefine</p>
+<p>这里奉上<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" >Hexo官方网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<h2 id="安装前置"><a href="#安装前置" class="headerlink" title="安装前置"></a>安装前置</h2><p>在安装Hexo之前我们需要先配好下列环境：</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/en" >Node.js <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://git-scm.com/" >Git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<p>安装方式和过程在不同的操作系统上是不同的，在此就不赘述了。读者可以自行查阅对应操作系统的资料。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>必备的环境配置结束之后即可使用npm安装Hexo</p>
+<p>在终端输入下列代码以安装Hexo</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="建立本地仓库和Github仓库"><a href="#建立本地仓库和Github仓库" class="headerlink" title="建立本地仓库和Github仓库"></a>建立本地仓库和Github仓库</h2><p>这里解释一下本地仓库和Github仓库的作用</p>
+<div class="tabs" id="tab-页面内不重复的id"><ul class="nav-tabs"></ul><div class="tab-content"></div></div>
+
+
+
+
         </div>
 
         
@@ -710,7 +738,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-16 17:26:29
+                    :</strong> 2024-06-16 17:55:59
             </li>
         
         <li>
@@ -818,7 +846,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">如何基于Hexo搭建自己的github博客？</div>
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Hexo是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%92%8CGithub%E4%BB%93%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">建立本地仓库和Github仓库</span></a></li></ol>
 
     </div>
 </div>
