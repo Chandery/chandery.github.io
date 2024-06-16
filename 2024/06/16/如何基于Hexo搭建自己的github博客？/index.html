@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png">
 <meta property="og:image" content="https://postimage.me/images/2024/06/16/imagedd4a06cbebeedc6a.png">
 <meta property="article:published_time" content="2024-06-16T09:21:40.000Z">
-<meta property="article:modified_time" content="2024-06-16T10:37:49.988Z">
+<meta property="article:modified_time" content="2024-06-16T10:48:04.551Z">
 <meta property="article:author" content="Chandery">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
@@ -596,11 +596,11 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
@@ -662,12 +662,28 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-16 18:37:49</span>
-            <span class="mobile">2024-06-16 18:37:49</span>
+            <span class="desktop">2024-06-16 18:48:04</span>
+            <span class="mobile">2024-06-16 18:48:04</span>
             <span class="hover-info">Updated</span>
         </span>
     
 
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
     
     
         <span class="article-tags article-meta-item">
@@ -685,12 +701,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>792 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>915 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -728,7 +744,7 @@
 <p>下面是仓库建立步骤</p>
 <div class="tabs" id="tab-local-and-github"><ul class="nav-tabs"><li class="tab active"><a class="#local-and-github-1">Github Repo</a></li><li class="tab"><a class="#local-and-github-2">Local Repo</a></li></ul><div class="tab-content"><div class="tab-pane active" id="local-and-github-1"><p>在个人的github中新建仓库，命名必须按一下格式</p>
   <div class="note p-4 mb-4 rounded-small info">
-    <p>{username}.github.io</p>
+    <p><strong>{username}.github.io</strong></p>
 
   </div>
 
@@ -773,7 +789,26 @@
 
 
 
-<h2 id="一些Hexo的常用命令"><a href="#一些Hexo的常用命令" class="headerlink" title="一些Hexo的常用命令"></a>一些Hexo的常用命令</h2>
+<h2 id="一些Hexo的常用命令"><a href="#一些Hexo的常用命令" class="headerlink" title="一些Hexo的常用命令"></a>一些Hexo的常用命令</h2><p>hexo的好处之一在于可以使用简单的命令进行博客的创建、编辑、预览、发布等。</p>
+
+  <div class="note p-4 mb-4 rounded-small warning">
+    <p>注意，所有的命令都要在本地仓库下打开终端才能运行</p>
+
+  </div>
+
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>命令如下：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] [name]</span><br></pre></td></tr></table></figure></div>
+
+<p>其中，layout表示新建的文件类型，在hexo中默认有三种文件类型：</p>
+<ul>
+<li>post</li>
+<li>page</li>
+<li>draft</li>
+</ul>
+<p>其中默认的layout（不写的情况）是post，这个可以在_config.yml中修改</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># File name of new posts</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure></div>
+
+
         </div>
 
         
@@ -787,7 +822,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-16 18:37:49
+                    :</strong> 2024-06-16 18:48:04
             </li>
         
         <li>
@@ -895,7 +930,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">如何基于Hexo搭建自己的github博客？</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Hexo是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%92%8CGithub%E4%BB%93%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">建立本地仓库和Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9BHexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">一些Hexo的常用命令</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Hexo是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%92%8CGithub%E4%BB%93%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">建立本地仓库和Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9BHexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">一些Hexo的常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">5.1.</span> <span class="nav-text">创建</span></a></li></ol></li></ol>
 
     </div>
 </div>

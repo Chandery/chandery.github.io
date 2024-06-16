@@ -31,7 +31,6 @@
 <p>根据F-Score我们可以综合地评价模型在两方面的表现。</p>
 ]]></content>
       <tags>
-        <tag>深度学习</tag>
         <tag>技术相关</tag>
       </tags>
   </entry>
@@ -61,7 +60,7 @@
 <p>下面是仓库建立步骤</p>
 <div class="tabs" id="tab-local-and-github"><ul class="nav-tabs"><li class="tab active"><a class="#local-and-github-1">Github Repo</a></li><li class="tab"><a class="#local-and-github-2">Local Repo</a></li></ul><div class="tab-content"><div class="tab-pane active" id="local-and-github-1"><p>在个人的github中新建仓库，命名必须按一下格式</p>
   <div class="note p-4 mb-4 rounded-small info">
-    <p>{username}.github.io</p>
+    <p><strong>{username}.github.io</strong></p>
 
   </div>
 
@@ -106,7 +105,29 @@
 
 
 
-<h2 id="一些Hexo的常用命令"><a href="#一些Hexo的常用命令" class="headerlink" title="一些Hexo的常用命令"></a>一些Hexo的常用命令</h2>]]></content>
+<h2 id="一些Hexo的常用命令"><a href="#一些Hexo的常用命令" class="headerlink" title="一些Hexo的常用命令"></a>一些Hexo的常用命令</h2><p>hexo的好处之一在于可以使用简单的命令进行博客的创建、编辑、预览、发布等。</p>
+
+  <div class="note p-4 mb-4 rounded-small warning">
+    <p>注意，所有的命令都要在本地仓库下打开终端才能运行</p>
+
+  </div>
+
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>命令如下：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new [layout] [name]</span><br></pre></td></tr></table></figure></div>
+
+<p>其中，layout表示新建的文件类型，在hexo中默认有三种文件类型：</p>
+<ul>
+<li>post</li>
+<li>page</li>
+<li>draft</li>
+</ul>
+<p>其中默认的layout（不写的情况）是post，这个可以在_config.yml中修改</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># File name of new posts</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
       <tags>
         <tag>博客搭建</tag>
       </tags>
