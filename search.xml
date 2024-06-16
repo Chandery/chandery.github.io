@@ -59,7 +59,7 @@
 <p>本地仓库是用来存放Hexo相关的源文件（如js脚本、后续主题的源文件包、模块包之类的）</p>
 <p>Github仓库里的内容即博客网站的Html、css、js源文件，是经过用户配置后的Hexo生成出来的</p>
 <p>下面是仓库建立步骤</p>
-<div class="tabs" id="tab-local-and-github"><ul class="nav-tabs"><li class="tab active"><a class="#local-and-github-1">Github仓库</a></li><li class="tab"><a class="#local-and-github-2">本地仓库</a></li></ul><div class="tab-content"><div class="tab-pane active" id="local-and-github-1"><p>在个人的github中新建仓库，命名必须按一下格式</p>
+<div class="tabs" id="tab-local-and-github"><ul class="nav-tabs"><li class="tab active"><a class="#local-and-github-1">Github Repo</a></li><li class="tab"><a class="#local-and-github-2">Local Repo</a></li></ul><div class="tab-content"><div class="tab-pane active" id="local-and-github-1"><p>在个人的github中新建仓库，命名必须按一下格式</p>
   <div class="note p-4 mb-4 rounded-small info">
     <p>{username}.github.io</p>
 
@@ -106,7 +106,7 @@
 
 
 
-]]></content>
+<h2 id="一些Hexo的常用命令"><a href="#一些Hexo的常用命令" class="headerlink" title="一些Hexo的常用命令"></a>一些Hexo的常用命令</h2>]]></content>
       <tags>
         <tag>博客搭建</tag>
       </tags>
