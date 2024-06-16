@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Chandery</title>
-    <url>/2024/06/14/Chandery/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>个人</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>机器学习中的几个常见的指标</title>
     <url>/2024/06/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8C%87%E6%A0%87/</url>
     <content><![CDATA[<p> 在机器学习中有对于模型性能评估的指标<br> 我们首先从混淆矩阵开始引入</p>
@@ -40,6 +32,15 @@
 ]]></content>
       <tags>
         <tag>深度学习</tag>
+        <tag>技术相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何基于Hexo搭建自己的github博客？</title>
+    <url>/2024/06/16/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2%EF%BC%9F/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
 </search>
