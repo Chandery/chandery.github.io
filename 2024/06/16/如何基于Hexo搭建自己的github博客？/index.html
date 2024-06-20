@@ -27,8 +27,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png">
 <meta property="og:image" content="https://postimage.me/images/2024/06/16/imagedd4a06cbebeedc6a.png">
+<meta property="og:image" content="https://postimage.me/images/2024/06/20/image.png">
+<meta property="og:image" content="https://postimage.me/images/2024/06/20/image9ffb8cc57f98f0cc.png">
+<meta property="og:image" content="https://postimage.me/images/2024/06/20/imagee2ae4de45c0dd550.png">
+<meta property="og:image" content="https://postimage.me/images/2024/06/20/imagec24f190030fb64db.png">
+<meta property="og:image" content="https://postimage.me/images/2024/06/20/imagebe7236e46f91aa7f.png">
+<meta property="og:image" content="https://postimage.me/images/2024/06/20/image7247c6e4c4750acd.png">
 <meta property="article:published_time" content="2024-06-16T09:21:40.000Z">
-<meta property="article:modified_time" content="2024-06-17T09:58:24.970Z">
+<meta property="article:modified_time" content="2024-06-20T15:55:22.103Z">
 <meta property="article:author" content="Chandery">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
@@ -662,8 +668,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-17 17:58:24</span>
-            <span class="mobile">2024-06-17 17:58:24</span>
+            <span class="desktop">2024-06-20 23:55:22</span>
+            <span class="mobile">2024-06-20 23:55:22</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -701,12 +707,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.8k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
         </span>
     
     
@@ -836,7 +842,54 @@
 <h2 id="主题的选择"><a href="#主题的选择" class="headerlink" title="主题的选择"></a>主题的选择</h2><p><a class="link"   target="_blank" rel="noopener" href="https://hexo.io/themes/" >Themes | Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>可以在Hexo官方的主题网站中找到自己喜欢的主题，然后阅读它的文档</p>
 <p>本主题是<a class="link"   target="_blank" rel="noopener" href="https://redefine-docs-v1.ohevan.com/" >hexo-theme-redefine Documentation | hexo-theme-redefine (ohevan.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>到这里一个简单的Hexo使用教程就结束了，上手起来真的很容易，投入很少的精力就可以做出精美的博客。</p>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>首先要购买自己喜欢的域名，这里以阿里云为例。</p>
+<p><em>为了领取15年的ssl证书，我们需要修改DNS服务器到cloudflare中</em></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/image.png"
+                      alt="image"
+                ></p>
+<p><em>具体可以自行SEARCH获得</em></p>
+<p>获得域名之后，如何绑定到我们的网站上？</p>
+<p>首先在仓库中建立一个CNAME的文件（不要有任何的后缀名），然后在里面写上购买好的域名</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/image9ffb8cc57f98f0cc.png"
+                      alt="image1"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/imagee2ae4de45c0dd550.png"
+                      alt="image3"
+                ></p>
+<p>然后在域名所在的服务器上添加目标DNS即可</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/imagec24f190030fb64db.png"
+                      alt="image4"
+                ></p>
+<p>然后在仓库的settings，找到pages，在custom domain的位置输入域名，然后等待check即可，保存成功后再勾选底下的强制https即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/imagebe7236e46f91aa7f.png"
+                      alt="image"
+                ></p>
+<p>在设置的过程中会有DNS传播的延时，因此没有成功可以等待一会再尝试。</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h3><p>成功了之后，会出现一个问题，每次hexo d之后仓库的文件都会被覆盖，CNAME文件就没了，每次还得自己手动添加，这是极其麻烦的。</p>
+<p><strong>解决办法：</strong></p>
+<p>既然每次deploy上去之后都会覆盖，那能不能让CNAME文件在每次deploy的时候都作为博客源文件的一部分被push上去呢？基于这个想法，我们只需要在本地hexo根目录的地方source里面创建一个CNAME文件，与仓库中同样操作即可。这样每次deploy上去之后就会自动覆盖之前的，域名链接也不用重新设置了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/image7247c6e4c4750acd.png"
+                      alt="image"
+                ></p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>到这里一个简单的Hexo使用教程就结束了，上手起来真的很容易，投入很少的精力就可以做出精美的博客。</p>
 <p>一起来试试吧！</p>
 
         </div>
@@ -852,7 +905,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-17 17:58:24
+                    :</strong> 2024-06-20 23:55:22
             </li>
         
         <li>
@@ -960,7 +1013,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">如何基于Hexo搭建自己的github博客？</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Hexo是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%92%8CGithub%E4%BB%93%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">建立本地仓库和Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9BHexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">一些Hexo的常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">5.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4"><span class="nav-number">5.2.</span> <span class="nav-text">清除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90"><span class="nav-number">5.3.</span> <span class="nav-text">生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">5.4.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0"><span class="nav-number">5.5.</span> <span class="nav-text">上传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9Bargs"><span class="nav-number">5.6.</span> <span class="nav-text">一些args</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">6.</span> <span class="nav-text">写博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">7.</span> <span class="nav-text">主题的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A"><span class="nav-number">8.</span> <span class="nav-text">域名绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD"><span class="nav-number">9.</span> <span class="nav-text">后续</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Hexo是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%92%8CGithub%E4%BB%93%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">建立本地仓库和Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9BHexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">一些Hexo的常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">5.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4"><span class="nav-number">5.2.</span> <span class="nav-text">清除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90"><span class="nav-number">5.3.</span> <span class="nav-text">生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">5.4.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0"><span class="nav-number">5.5.</span> <span class="nav-text">上传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9Bargs"><span class="nav-number">5.6.</span> <span class="nav-text">一些args</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">6.</span> <span class="nav-text">写博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">7.</span> <span class="nav-text">主题的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A"><span class="nav-number">8.</span> <span class="nav-text">域名绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PS"><span class="nav-number">8.1.</span> <span class="nav-text">PS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD"><span class="nav-number">9.</span> <span class="nav-text">后续</span></a></li></ol>
 
     </div>
 </div>

@@ -155,7 +155,54 @@
 <h2 id="主题的选择"><a href="#主题的选择" class="headerlink" title="主题的选择"></a>主题的选择</h2><p><a class="link"   href="https://hexo.io/themes/" >Themes | Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>可以在Hexo官方的主题网站中找到自己喜欢的主题，然后阅读它的文档</p>
 <p>本主题是<a class="link"   href="https://redefine-docs-v1.ohevan.com/" >hexo-theme-redefine Documentation | hexo-theme-redefine (ohevan.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>到这里一个简单的Hexo使用教程就结束了，上手起来真的很容易，投入很少的精力就可以做出精美的博客。</p>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>首先要购买自己喜欢的域名，这里以阿里云为例。</p>
+<p><em>为了领取15年的ssl证书，我们需要修改DNS服务器到cloudflare中</em></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/image.png"
+                      alt="image"
+                ></p>
+<p><em>具体可以自行SEARCH获得</em></p>
+<p>获得域名之后，如何绑定到我们的网站上？</p>
+<p>首先在仓库中建立一个CNAME的文件（不要有任何的后缀名），然后在里面写上购买好的域名</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/image9ffb8cc57f98f0cc.png"
+                      alt="image1"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/imagee2ae4de45c0dd550.png"
+                      alt="image3"
+                ></p>
+<p>然后在域名所在的服务器上添加目标DNS即可</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/imagec24f190030fb64db.png"
+                      alt="image4"
+                ></p>
+<p>然后在仓库的settings，找到pages，在custom domain的位置输入域名，然后等待check即可，保存成功后再勾选底下的强制https即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/imagebe7236e46f91aa7f.png"
+                      alt="image"
+                ></p>
+<p>在设置的过程中会有DNS传播的延时，因此没有成功可以等待一会再尝试。</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h3><p>成功了之后，会出现一个问题，每次hexo d之后仓库的文件都会被覆盖，CNAME文件就没了，每次还得自己手动添加，这是极其麻烦的。</p>
+<p><strong>解决办法：</strong></p>
+<p>既然每次deploy上去之后都会覆盖，那能不能让CNAME文件在每次deploy的时候都作为博客源文件的一部分被push上去呢？基于这个想法，我们只需要在本地hexo根目录的地方source里面创建一个CNAME文件，与仓库中同样操作即可。这样每次deploy上去之后就会自动覆盖之前的，域名链接也不用重新设置了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://postimage.me/images/2024/06/20/image7247c6e4c4750acd.png"
+                      alt="image"
+                ></p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>到这里一个简单的Hexo使用教程就结束了，上手起来真的很容易，投入很少的精力就可以做出精美的博客。</p>
 <p>一起来试试吧！</p>
 ]]></content>
       <categories>
