@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://postimage.me/images/2024/06/21/image.png">
 <meta property="og:image" content="https://postimage.me/images/2024/06/21/imageac6e0a5ad319c4c6.png">
 <meta property="article:published_time" content="2024-06-21T15:11:53.000Z">
-<meta property="article:modified_time" content="2024-06-21T15:36:56.720Z">
+<meta property="article:modified_time" content="2024-06-22T13:10:37.842Z">
 <meta property="article:author" content="Chandery">
 <meta property="article:tag" content="技术相关">
 <meta name="twitter:card" content="summary">
@@ -770,8 +770,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-21 23:36:56</span>
-            <span class="mobile">2024-06-21 23:36:56</span>
+            <span class="desktop">2024-06-22 21:10:37</span>
+            <span class="mobile">2024-06-22 21:10:37</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -809,12 +809,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>353 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>494 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -869,7 +869,13 @@ mjx-container[display="true"] + br {
 
 <p>可以看到，使用np.resize的时候对数组进行了堆叠</p>
 <p><em>很显然，在本次任务中，我们用到的是第一种</em></p>
-<h4 id="关于python怎么导入mat格式的数据"><a href="#关于python怎么导入mat格式的数据" class="headerlink" title="关于python怎么导入mat格式的数据"></a>关于python怎么导入mat格式的数据</h4>
+<h4 id="关于python怎么导入mat格式的数据"><a href="#关于python怎么导入mat格式的数据" class="headerlink" title="关于python怎么导入mat格式的数据"></a>关于python怎么导入mat格式的数据</h4><p>在python中导入mat格式，使用到scipy.io库</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy.io <span class="keyword">as</span> sio</span><br><span class="line">file = sio.loadmat(<span class="string">"./data.mat"</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>但是在python中导入mat文件会遇到一些问题，毕竟.mat文件是matlab的文件格式。在matlab中.mat文件有struct的数据类型，但是用scipy.io打开之后变为ndarray的类型，并没有struct的类型。因此对于struct我们需要使用这种方式打开：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pathtest = <span class="string">"BCI_IV2b_mat/B01T.mat"</span></span><br><span class="line"></span><br><span class="line">file = sio.loadmat(pathtest)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(file))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(file[<span class="string">"data"</span>][<span class="number">0</span>,<span class="number">0</span>]))</span><br><span class="line"><span class="built_in">print</span>(file[<span class="string">"data"</span>][<span class="string">"X"</span>]) <span class="comment">#这种情况会报错</span></span><br><span class="line"><span class="built_in">print</span>(file[<span class="string">"data"</span>][<span class="number">0</span>,<span class="number">0</span>][<span class="string">"X"</span>]) <span class="comment">#这样写才能正常运行</span></span><br></pre></td></tr></table></figure></div>
+
+
         </div>
 
         
@@ -883,7 +889,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-21 23:36:56
+                    :</strong> 2024-06-22 21:10:37
             </li>
         
         <li>

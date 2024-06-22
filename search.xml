@@ -255,7 +255,13 @@
 
 <p>可以看到，使用np.resize的时候对数组进行了堆叠</p>
 <p><em>很显然，在本次任务中，我们用到的是第一种</em></p>
-<h4 id="关于python怎么导入mat格式的数据"><a href="#关于python怎么导入mat格式的数据" class="headerlink" title="关于python怎么导入mat格式的数据"></a>关于python怎么导入mat格式的数据</h4>]]></content>
+<h4 id="关于python怎么导入mat格式的数据"><a href="#关于python怎么导入mat格式的数据" class="headerlink" title="关于python怎么导入mat格式的数据"></a>关于python怎么导入mat格式的数据</h4><p>在python中导入mat格式，使用到scipy.io库</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy.io <span class="keyword">as</span> sio</span><br><span class="line">file = sio.loadmat(<span class="string">"./data.mat"</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>但是在python中导入mat文件会遇到一些问题，毕竟.mat文件是matlab的文件格式。在matlab中.mat文件有struct的数据类型，但是用scipy.io打开之后变为ndarray的类型，并没有struct的类型。因此对于struct我们需要使用这种方式打开：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">pathtest = <span class="string">"BCI_IV2b_mat/B01T.mat"</span></span><br><span class="line"></span><br><span class="line">file = sio.loadmat(pathtest)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(file))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(file[<span class="string">"data"</span>][<span class="number">0</span>,<span class="number">0</span>]))</span><br><span class="line"><span class="built_in">print</span>(file[<span class="string">"data"</span>][<span class="string">"X"</span>]) <span class="comment">#这种情况会报错</span></span><br><span class="line"><span class="built_in">print</span>(file[<span class="string">"data"</span>][<span class="number">0</span>,<span class="number">0</span>][<span class="string">"X"</span>]) <span class="comment">#这样写才能正常运行</span></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
       <categories>
         <category>深度学习</category>
       </categories>
