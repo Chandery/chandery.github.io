@@ -261,12 +261,29 @@
 <p>但是在python中导入mat文件会遇到一些问题，毕竟.mat文件是matlab的文件格式。在matlab中.mat文件有struct的数据类型，但是用scipy.io打开之后变为ndarray的类型，并没有struct的类型。因此对于struct我们需要使用这种方式打开：</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">pathtest = <span class="string">"BCI_IV2b_mat/B01T.mat"</span></span><br><span class="line"></span><br><span class="line">file = sio.loadmat(pathtest)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(file))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(file[<span class="string">"data"</span>][<span class="number">0</span>,<span class="number">0</span>]))</span><br><span class="line"><span class="built_in">print</span>(file[<span class="string">"data"</span>][<span class="string">"X"</span>]) <span class="comment">#这种情况会报错</span></span><br><span class="line"><span class="built_in">print</span>(file[<span class="string">"data"</span>][<span class="number">0</span>,<span class="number">0</span>][<span class="string">"X"</span>]) <span class="comment">#这样写才能正常运行</span></span><br></pre></td></tr></table></figure></div>
 
+<h2 id="代码搭建流程"><a href="#代码搭建流程" class="headerlink" title="代码搭建流程"></a>代码搭建流程</h2><p>由于这是我第一次完整搭建深度学习的代码，</p>
 ]]></content>
       <categories>
         <category>深度学习</category>
       </categories>
       <tags>
         <tag>技术相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>制作装机系统盘的方法</title>
+    <url>/2024/07/01/%E5%88%B6%E4%BD%9C%E8%A3%85%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9B%98%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>以最广受欢迎的ubuntu20.04LTS为例</p>
+<h2 id="ios系统镜像"><a href="#ios系统镜像" class="headerlink" title="ios系统镜像"></a>ios系统镜像</h2><p>可以在以下网站下载ubuntu发行版<br><a class="link" href="http://releases.ubuntu.com/20.04/">http://releases.ubuntu.com/20.04/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="下载启动盘制作工具（强烈推荐！非常好用！）"><a href="#下载启动盘制作工具（强烈推荐！非常好用！）" class="headerlink" title="下载启动盘制作工具（强烈推荐！非常好用！）"></a>下载启动盘制作工具（强烈推荐！非常好用！）</h2><p><a class="link" href="http://rufus.ie/downloads/">http://rufus.ie/downloads/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>下载好之后，准备一个大概8GB的u盘即可<br><img lazyload="" src="/images/loading.svg" data-src="https://postimage.me/images/2024/07/01/imagee7f47e97033f7585.png" alt="image"></p>
+<h2 id="装系统"><a href="#装系统" class="headerlink" title="装系统"></a>装系统</h2><p>装机的时候插入U盘，启动时进入BIOS，选择从U盘启动即可按照步骤安装。</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
       </tags>
   </entry>
 </search>
