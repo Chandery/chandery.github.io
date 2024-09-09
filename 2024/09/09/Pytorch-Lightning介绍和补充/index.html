@@ -13,24 +13,30 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://chandery.github.io/about/"/>
+    <link rel="canonical" href="https://chandery.github.io/2024/09/09/pytorch-lightning介绍和补充/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="大家好，我是Chandery  八年OIer(退役) 一年ACMer(退役) 现在对深度学习感兴趣，欢迎大家找我交流！如有交流建议可以在评论区，也可以给我发邮件。  我的Email：&#99;&#104;&#97;&#x6e;&#100;&#101;&#x72;&#121;&#49;&#49;&#x31;&#x32;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&amp;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="欢迎来到我的地盘！">
-<meta property="og:url" content="https://chandery.github.io/about/index.html">
+        <meta name="description" content="Lighting是什么 Pytorch-Lightning是一个轻量级的Pytorch深度学习框架，旨在简化和规范深度学习模型的训练过程。它的好处在于提供了一组模块和接口，使用户能够更容易地组织和训练模型。同时减少样板代码的数量。PyTorch-Lightning的设计目标是提高代码的可读性和可维护性，同时保持灵活性。它通过将训练循环的组件拆分为独立的模块（如模型、优化器、调度器等），以及提供默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pytorch_Lightning介绍和补充">
+<meta property="og:url" content="https://chandery.github.io/2024/09/09/Pytorch-Lightning%E4%BB%8B%E7%BB%8D%E5%92%8C%E8%A1%A5%E5%85%85/index.html">
 <meta property="og:site_name" content="Chandery&#39;s Blog">
-<meta property="og:description" content="大家好，我是Chandery  八年OIer(退役) 一年ACMer(退役) 现在对深度学习感兴趣，欢迎大家找我交流！如有交流建议可以在评论区，也可以给我发邮件。  我的Email：&#99;&#104;&#97;&#x6e;&#100;&#101;&#x72;&#121;&#49;&#49;&#x31;&#x32;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&amp;">
+<meta property="og:description" content="Lighting是什么 Pytorch-Lightning是一个轻量级的Pytorch深度学习框架，旨在简化和规范深度学习模型的训练过程。它的好处在于提供了一组模块和接口，使用户能够更容易地组织和训练模型。同时减少样板代码的数量。PyTorch-Lightning的设计目标是提高代码的可读性和可维护性，同时保持灵活性。它通过将训练循环的组件拆分为独立的模块（如模型、优化器、调度器等），以及提供默认">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://postimage.me/images/2024/06/14/image.png">
-<meta property="article:published_time" content="2024-06-14T12:07:02.000Z">
-<meta property="article:modified_time" content="2024-06-16T10:50:57.558Z">
+<meta property="og:image" content="https://programmer.ink/images/think/cc67f3bf4ae2acc144aa28cf79ae9f8f.jpg">
+<meta property="og:image" content="https://postimage.me/images/2024/09/09/image-20240909211052747.png">
+<meta property="og:image" content="https://postimage.me/images/2024/09/09/image-20240909213650980.png">
+<meta property="og:image" content="https://postimage.me/images/2024/09/09/image-20240909213702638.png">
+<meta property="og:image" content="https://postimage.me/images/2024/09/09/image-20240909213713901.png">
+<meta property="og:image" content="https://postimage.me/images/2024/09/09/image-20240909213721740.png">
+<meta property="article:published_time" content="2024-09-09T14:33:26.000Z">
+<meta property="article:modified_time" content="2024-09-09T14:37:18.786Z">
 <meta property="article:author" content="Chandery">
+<meta property="article:tag" content="技术相关">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://postimage.me/images/2024/06/14/image.png">
+<meta name="twitter:image" content="https://programmer.ink/images/think/cc67f3bf4ae2acc144aa28cf79ae9f8f.jpg">
     
     
     <!--- Icon Part-->
@@ -42,7 +48,7 @@
     
     <title>
         
-            欢迎来到我的地盘！ -
+            Pytorch_Lightning介绍和补充 -
         
         Chandery&#39;s Blog
     </title>
@@ -260,7 +266,119 @@
 
     
     
-<meta name="generator" content="Hexo 7.2.0"></head>
+<meta name="generator" content="Hexo 7.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -626,35 +744,240 @@
             <div class="main-content">
 
                 
-                    <div class="page-template-container">
-    
-    
-    
-    <div class="page-template-content markdown-body">
-        
-            <h2 id="大家好，我是Chandery"><a href="#大家好，我是Chandery" class="headerlink" title="大家好，我是Chandery"></a>大家好，我是Chandery</h2><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/14/image.png"
-                      style="zoom: 200%;" 
-                >
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
 
-<p><em>八年OIer(退役)</em></p>
-<p><em>一年ACMer(退役)</em></p>
-<p>现在对深度学习感兴趣，欢迎大家找我交流！如有交流建议可以在评论区，也可以给我发邮件。</p>
-<ul>
-<li>我的Email：<a class="link"   href="mailto:&#99;&#104;&#97;&#x6e;&#100;&#101;&#x72;&#121;&#49;&#49;&#x31;&#x32;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109;" >&#99;&#104;&#97;&#x6e;&#100;&#101;&#x72;&#121;&#49;&#49;&#x31;&#x32;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>我的<a class="link"   target="_blank" rel="noopener" href="https://github.com/Chandery" >Github <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>我的<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/cdy1206473601" >CSDN <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，上面基本上是些与OI，ACM有关的东西，感兴趣的可以多交流！</li>
-</ul>
-<p>计算机科学与技术本科在读，爱运动，爱音乐，爱旅行ε&#x3D;ε&#x3D;ε&#x3D; (~￣▽￣) ~</p>
-<p>撸铁💪一年，新手一名，膜拜各位大佬orzorz</p>
+        <div class="article-title relative w-full">
+            
+                
+                
+                <img src="https://programmer.ink/images/think/cc67f3bf4ae2acc144aa28cf79ae9f8f.jpg" alt="Pytorch_Lightning介绍和补充" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                
+                <div class="w-full flex items-center absolute bottom-0 justify-start">
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-bold backdrop-blur-lg rounded-xl border border-border-color ">Pytorch_Lightning介绍和补充</h1>
+                </div>
+            
+            </div>
 
         
-    </div>
-    <div class="page-template-comments">
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/image.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Chandery</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-09-09 22:33:26</span>
+        <span class="mobile">2024-09-09 22:33:26</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-09-09 22:37:18</span>
+            <span class="mobile">2024-09-09 22:37:18</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/">技术相关</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
         
-            <div class="comments-container mt-10 w-full ">
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h2 id="Lighting是什么"><a href="#Lighting是什么" class="headerlink" title="Lighting是什么"></a>Lighting是什么</h2><blockquote>
+<p>Pytorch-Lightning是一个轻量级的Pytorch深度学习框架，旨在<strong>简化和规范</strong>深度学习模型的训练过程。它的好处在于提供了一组模块和接口，使用户能够更容易地组织和训练模型。同时减少样板代码的数量。PyTorch-Lightning的设计目标是<strong>提高代码的可读性和可维护性</strong>，同时保持灵活性。它通过将训练循环的组件<strong>拆分</strong>为独立的模块（如模型、优化器、调度器等），以及提供默认实现来简化用户代码。这使得用户可以专注于模型的定义和高级训练策略，而不必处理底层训练循环的细节。</p>
+</blockquote>
+<p>官方文档：<a class="link" target="_blank" rel="noopener" href="https://lightning.ai/docs/pytorch/stable/">Welcome to ⚡ PyTorch Lightning — PyTorch Lightning 2.4.0 documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>通过简介，可以了解Lightning是基于Pytorch的一个框架，最大的特点就是对代码进行拆分，称为几个独立的模块，包装起来，使得编码和训练过程更加简化和规范。</p>
+<img lazyload="" src="/images/loading.svg" data-src="https://programmer.ink/images/think/cc67f3bf4ae2acc144aa28cf79ae9f8f.jpg" alt="Getting started with pytorch lightning - getting started">
+
+<p>要理解Lighting框架的基本构造，需要理解Lightning框架在构建模型的时候是构建一个模型系统，即不仅仅像Pytorch继承nn.Module的类，仅仅建立模型的定义，而是在建立模型基本结构定义的基础上，加入一系列模块的定义，包括优化器、训练循环、验证循环等等，继承pl.LightningModule的类，使得后续训练、验证非常的便捷</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lightning <span class="keyword">as</span> L</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LitAutoEncoder</span>(L.LightningModule):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, Net</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        self.Net = Net</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">return</span> self.Net(x)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">criterion</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        <span class="keyword">return</span> F.cross_entropy(x, y)</span><br><span class="line">    </span><br><span class="line">	<span class="comment"># *结构化定义train loop</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">training_step</span>(<span class="params">self, batch</span>):</span><br><span class="line">        x, y = batch</span><br><span class="line">        x_hat = self.forward(x)</span><br><span class="line">        loss = self.criterion(x_hat, y)</span><br><span class="line">        <span class="keyword">return</span> loss</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">configure_optimizers</span>(<span class="params">self</span>):</span><br><span class="line">        optimizer = torch.optim.Adam(self.parameters(), lr=<span class="number">1e-3</span>)</span><br><span class="line">        <span class="keyword">return</span> optimizer</span><br></pre></td></tr></table></figure></div>
+
+<p>值得注意的是，在这个类中是不需要对device进行设置的，即.cuda()或者.to(device)等等Pytorch的写法，Lightning框架中封装了这些信息。</p>
+<p>除此之外还可以对模型的test，valid的循环进行定义，可以自定义准确率之类的指标</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LitAutoEncoder</span>(L.LightningModule):</span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_step</span>(<span class="params">self, batc</span>):</span><br><span class="line">        x, y = batch</span><br><span class="line">        x_hat = self.Net(z)</span><br><span class="line">        test_loss = self.criterion(x_hat, y)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">validation_step</span>(<span class="params">self, batch</span>):</span><br><span class="line">        x, y = batch</span><br><span class="line">        x_hat = self.Net(x)</span><br><span class="line">        val_loss = self.criterion(x_hat, y)</span><br><span class="line">        <span class="comment"># acc = y.argmax(dim=1).eq(x_hat.argmax(dim=1)).sum().item()/len(y)</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><p>对以上模型系统进行封装之后，训练变得很方便</p>
+<p>只需要使用Lightning框架中的Trainer()类，使用方法fit即可</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># model</span></span><br><span class="line">autoencoder = LitAutoEncoder(Net)</span><br><span class="line"></span><br><span class="line"><span class="comment"># train model</span></span><br><span class="line">trainer = L.Trainer()</span><br><span class="line">trainer.fit(model=autoencoder, train_dataloaders=train_loader)</span><br></pre></td></tr></table></figure></div>
+
+<p>这个代码在框架之下实际上相当于如下代码</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">autoencoder = LitAutoEncoder(Net)</span><br><span class="line">optimizer = autoencoder.configure_optimizers()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> batch_idx, batch <span class="keyword">in</span> <span class="built_in">enumerate</span>(train_loader):</span><br><span class="line">    loss = autoencoder.training_step(batch, batch_idx)</span><br><span class="line"></span><br><span class="line">    loss.backward()  </span><br><span class="line">    optimizer.step()</span><br><span class="line">    optimizer.zero_grad()</span><br></pre></td></tr></table></figure></div>
+
+<p>可以看到，我们在模型系统模块中定义的training_step其实就是每次放入train_loader中的一个batch，然后进行自定义的操作，Lighting封装好了对loss进行的反向传播，然后用定义好的优化器进行优化</p>
+<h2 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h2><blockquote>
+<p>使用Lightning框架之后，第一个遇到的问题就是Debug的问题。因为运行的过程被封装在了框架内部，因此调试起来很困难，同时又因为框架训练过程集成了进度条，输出调试也有了限制，无法每个epoch或者batch都进行输出，否则就会和进度条的屏幕刷新冲突，出现闪屏，根本看不清楚等等。</p>
+<p>为解决这个问题，Lightning框架集成了不少用于debug的功能函数或者参数，方便使用者进行调试。</p>
+</blockquote>
+<p><strong>这里分享几个减少训练体量以快速找出bug的功能</strong></p>
+<h3 id="Trainer的fast-dev-run参数"><a href="#Trainer的fast-dev-run参数" class="headerlink" title="Trainer的fast_dev_run参数"></a>Trainer的fast_dev_run参数</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trainer = Trainer(fast_dev_run=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>这个参数表示在这个设置下运行程序，程序只会进行一个batch的训练，一个batch的验证和一个batch的测试和预测。</p>
+<p>方便我们输出调试也好、单步调试也好，对代码逻辑进行debug</p>
+<p>当然这个参数也可以设置称为数量n，表示跑n个batch</p>
+<p>当然值得注意的是，这个参数当且仅当debug的时候使用，会禁用一些功能</p>
+<h3 id="数据规模的减小参数"><a href="#数据规模的减小参数" class="headerlink" title="数据规模的减小参数"></a>数据规模的减小参数</h3><p>在很多调试情况下我们不希望使用全部数据进行训练,只需要确定程序是否按照预期路线执行,Lightning给了一个这样的调试参数</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># use only 10% of training data and 1% of val data</span></span><br><span class="line">trainer = Trainer(limit_train_batches=<span class="number">0.1</span>, limit_val_batches=<span class="number">0.01</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># use 10 batches of train and 5 batches of val</span></span><br><span class="line">trainer = Trainer(limit_train_batches=<span class="number">10</span>, limit_val_batches=<span class="number">5</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>这个方法也是很实用的,可以用参数设置使得数据规模展示减小,方便调试</p>
+<h3 id="输出模型每层的维度"><a href="#输出模型每层的维度" class="headerlink" title="输出模型每层的维度"></a>输出模型每层的维度</h3><p>这个在模型建立的阶段是非常实用的!可以通过输出,动态的调整模型的超参,使得模型更加合理</p>
+<p>设置的方法也很简单,只需要在LightningModule初始化的方法中加入example_input_array即可</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LitModel</span>(<span class="title class_ inherited__">LightningModule</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, *args, **kwargs</span>):</span><br><span class="line">        self.example_input_array = torch.Tensor(<span class="number">32</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  | Name  | <span class="type">Type</span>        | Params | Mode  | In sizes  | Out sizes</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line"><span class="number">0</span> | net   | Sequential  | <span class="number">132</span> K  | train | [<span class="number">10</span>, <span class="number">256</span>] | [<span class="number">10</span>, <span class="number">512</span>]</span><br><span class="line"><span class="number">1</span> | net<span class="number">.0</span> | Linear      | <span class="number">131</span> K  | train | [<span class="number">10</span>, <span class="number">256</span>] | [<span class="number">10</span>, <span class="number">512</span>]</span><br><span class="line"><span class="number">2</span> | net<span class="number">.1</span> | BatchNorm1d | <span class="number">1.0</span> K  | train | [<span class="number">10</span>, <span class="number">512</span>] | [<span class="number">10</span>, <span class="number">512</span>]</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="如何使用单步调试对Lightning框架写的代码进行调试"><a href="#如何使用单步调试对Lightning框架写的代码进行调试" class="headerlink" title="如何使用单步调试对Lightning框架写的代码进行调试"></a>如何使用单步调试对Lightning框架写的代码进行调试</h3><p>对于上述输出调试无法有效进行的时候,经常用到单步调试对代码一步一步运行,查看每个变量有没有问题.</p>
+<p>但是和未封装的pytorch不同,Lightning的运行循环是被封装起来的,因此无法和熟悉的循环一样单步运行调试</p>
+<p>经过探索,总结了以下方法（以Vscode为例）</p>
+<ol start="2">
+<li><p>在模型模块的方法定义中的定义训练循环的地方打上断点</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://postimage.me/images/2024/09/09/image-20240909211052747.png" alt="image 20240909211052747"></p>
+</li>
+<li><p>运行程序至主程序的断点处停下</p>
+</li>
+<li><p>此时不用单步运行，直接继续运行程序，即可进入training_step的断点处，这时候再进行单步运行就可以一步一步查看模型运行的结果和loss的变化；</p>
+</li>
+<li><p>需要看多个batch的时候，每次loop结束让程序继续运行而非单步运行，即可再次停在training_step的断点处，重复此过程即可。</p>
+</li>
+</ol>
+<h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://postimage.me/images/2024/09/09/image-20240909213650980.png" alt="image 20240909213650980"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://postimage.me/images/2024/09/09/image-20240909213702638.png" alt="image 20240909213702638"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://postimage.me/images/2024/09/09/image-20240909213713901.png" alt="image 20240909213713901"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://postimage.me/images/2024/09/09/image-20240909213721740.png" alt="image 20240909213721740"></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Pytorch_Lightning介绍和补充</li>
+        <li><strong>Author:</strong> Chandery</li>
+        <li><strong>Created at
+                :</strong> 2024-09-09 22:33:26</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-09-09 22:37:18
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://chandery.chat/2024/09/09/Pytorch-Lightning介绍和补充/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/">#技术相关</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/01/%E5%88%B6%E4%BD%9C%E8%A3%85%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9B%98%E7%9A%84%E6%96%B9%E6%B3%95/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">制作装机系统盘的方法</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
     <div id="comment-anchor" class="w-full h-2.5"></div>
     <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
         Comments
@@ -693,9 +1016,24 @@
     
 </div>
 
+            </div>
         
     </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">Pytorch_Lightning介绍和补充</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lighting%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">Lighting是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83"><span class="nav-number">2.</span> <span class="nav-text">训练</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Debugging"><span class="nav-number">3.</span> <span class="nav-text">Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trainer%E7%9A%84fast-dev-run%E5%8F%82%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">Trainer的fast_dev_run参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A7%84%E6%A8%A1%E7%9A%84%E5%87%8F%E5%B0%8F%E5%8F%82%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">数据规模的减小参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9E%8B%E6%AF%8F%E5%B1%82%E7%9A%84%E7%BB%B4%E5%BA%A6"><span class="nav-number">3.3.</span> <span class="nav-text">输出模型每层的维度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8D%95%E6%AD%A5%E8%B0%83%E8%AF%95%E5%AF%B9Lightning%E6%A1%86%E6%9E%B6%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81%E8%BF%9B%E8%A1%8C%E8%B0%83%E8%AF%95"><span class="nav-number">3.4.</span> <span class="nav-text">如何使用单步调试对Lightning框架写的代码进行调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="nav-number">4.</span> <span class="nav-text">结果展示</span></a></li></ol>
+
+    </div>
 </div>
+        </div>
+    
+</div>
+
 
 
                 
@@ -756,6 +1094,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
