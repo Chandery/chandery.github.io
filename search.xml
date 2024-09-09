@@ -287,7 +287,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Pytorch_Lightning介绍和补充</title>
+    <title>Pytorch Lightning介绍和补充</title>
     <url>/2024/09/09/Pytorch-Lightning%E4%BB%8B%E7%BB%8D%E5%92%8C%E8%A1%A5%E5%85%85/</url>
     <content><![CDATA[<h2 id="Lighting是什么"><a href="#Lighting是什么" class="headerlink" title="Lighting是什么"></a>Lighting是什么</h2><blockquote>
 <p>Pytorch-Lightning是一个轻量级的Pytorch深度学习框架，旨在<strong>简化和规范</strong>深度学习模型的训练过程。它的好处在于提供了一组模块和接口，使用户能够更容易地组织和训练模型。同时减少样板代码的数量。PyTorch-Lightning的设计目标是<strong>提高代码的可读性和可维护性</strong>，同时保持灵活性。它通过将训练循环的组件<strong>拆分</strong>为独立的模块（如模型、优化器、调度器等），以及提供默认实现来简化用户代码。这使得用户可以专注于模型的定义和高级训练策略，而不必处理底层训练循环的细节。</p>
