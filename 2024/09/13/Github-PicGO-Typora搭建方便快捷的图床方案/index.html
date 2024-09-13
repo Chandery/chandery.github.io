@@ -13,32 +13,35 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://chandery.github.io/2024/06/16/如何基于hexo搭建自己的github博客？/"/>
+    <link rel="canonical" href="https://chandery.github.io/2024/09/13/github-picgo-typora搭建方便快捷的图床方案/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Hexo是什么？Hexo是一个快速、简洁且高效的博客框架，尤其对于新手十分友好，其实没有前端能力也可以随心、快速地搭建自己的博客网站。如果这些描述不够直观，我将展示示例博客。  示例展示  示例博客中的所有内容都是使用Hexo搭建，使用的主题是Redefine 这里奉上Hexo官方网站 。 安装前置在安装Hexo之前我们需要先配好下列环境：  Node.js  (Node.js 版本需不低于 10">
+        <meta name="description" content="图床是什么&amp;为什么需要图床“图床”是一个网络术语，它指的是一种用于存储和托管图片的在线服务。通常情况下，图床允许用户上传图片文件，并提供一个链接或者嵌入代码，使得用户可以在网页或者论坛等地方方便地分享和展示这些图片。 图床服务的主要功能包括：  图片存储： 用户可以将图片上传到图床服务器上，服务器会为每张图片分配一个唯一的URL用于访问。 图片托管： 图床服务将用户上传的图片存储在自己的服">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何基于Hexo搭建自己的github博客？">
-<meta property="og:url" content="https://chandery.github.io/2024/06/16/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EHexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2%EF%BC%9F/index.html">
+<meta property="og:title" content="Github+PicGO+Typora搭建方便快捷的图床方案">
+<meta property="og:url" content="https://chandery.github.io/2024/09/13/Github-PicGO-Typora%E6%90%AD%E5%BB%BA%E6%96%B9%E4%BE%BF%E5%BF%AB%E6%8D%B7%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="Chandery&#39;s Blog">
-<meta property="og:description" content="Hexo是什么？Hexo是一个快速、简洁且高效的博客框架，尤其对于新手十分友好，其实没有前端能力也可以随心、快速地搭建自己的博客网站。如果这些描述不够直观，我将展示示例博客。  示例展示  示例博客中的所有内容都是使用Hexo搭建，使用的主题是Redefine 这里奉上Hexo官方网站 。 安装前置在安装Hexo之前我们需要先配好下列环境：  Node.js  (Node.js 版本需不低于 10">
+<meta property="og:description" content="图床是什么&amp;为什么需要图床“图床”是一个网络术语，它指的是一种用于存储和托管图片的在线服务。通常情况下，图床允许用户上传图片文件，并提供一个链接或者嵌入代码，使得用户可以在网页或者论坛等地方方便地分享和展示这些图片。 图床服务的主要功能包括：  图片存储： 用户可以将图片上传到图床服务器上，服务器会为每张图片分配一个唯一的URL用于访问。 图片托管： 图床服务将用户上传的图片存储在自己的服">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png">
-<meta property="og:image" content="https://postimage.me/images/2024/06/16/imagedd4a06cbebeedc6a.png">
-<meta property="og:image" content="https://postimage.me/images/2024/06/20/image.png">
-<meta property="og:image" content="https://postimage.me/images/2024/06/20/image9ffb8cc57f98f0cc.png">
-<meta property="og:image" content="https://postimage.me/images/2024/06/20/imagee2ae4de45c0dd550.png">
-<meta property="og:image" content="https://postimage.me/images/2024/06/20/imagec24f190030fb64db.png">
-<meta property="og:image" content="https://postimage.me/images/2024/06/20/imagebe7236e46f91aa7f.png">
-<meta property="og:image" content="https://postimage.me/images/2024/06/20/image7247c6e4c4750acd.png">
-<meta property="article:published_time" content="2024-06-16T09:21:40.000Z">
-<meta property="article:modified_time" content="2024-06-20T15:55:22.103Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913190959777.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191046971.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191154778.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191509028.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191446925.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191616379.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191644112.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191857137.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913192430416.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913192530136.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913192650075.png">
+<meta property="article:published_time" content="2024-09-13T10:59:10.000Z">
+<meta property="article:modified_time" content="2024-09-13T11:28:43.871Z">
 <meta property="article:author" content="Chandery">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913190959777.png">
     
     
     <!--- Icon Part-->
@@ -50,7 +53,7 @@
     
     <title>
         
-            如何基于Hexo搭建自己的github博客？ -
+            Github+PicGO+Typora搭建方便快捷的图床方案 -
         
         Chandery&#39;s Blog
     </title>
@@ -268,7 +271,119 @@
 
     
     
-<meta name="generator" content="Hexo 7.2.0"></head>
+<meta name="generator" content="Hexo 7.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -641,10 +756,10 @@
             
                 
                 
-                <img src="https://postimage.me/images/2024/06/16/imagea4edf0cffcfe673b.png" alt="如何基于Hexo搭建自己的github博客？" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                <img src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/20240913190322.png" alt="Github+PicGO+Typora搭建方便快捷的图床方案" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
                 
                 <div class="w-full flex items-center absolute bottom-0 justify-start">
-                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-bold backdrop-blur-lg rounded-xl border border-border-color ">如何基于Hexo搭建自己的github博客？</h1>
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-bold backdrop-blur-lg rounded-xl border border-border-color ">Github+PicGO+Typora搭建方便快捷的图床方案</h1>
                 </div>
             
             </div>
@@ -665,15 +780,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-06-16 17:21:40</span>
-        <span class="mobile">2024-06-16 17:21:40</span>
+        <span class="desktop">2024-09-13 18:59:10</span>
+        <span class="mobile">2024-09-13 18:59:10</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-20 23:55:22</span>
-            <span class="mobile">2024-06-20 23:55:22</span>
+            <span class="desktop">2024-09-13 19:28:43</span>
+            <span class="mobile">2024-09-13 19:28:43</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -711,12 +826,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.8k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>804 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -731,170 +846,60 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="Hexo是什么？"><a href="#Hexo是什么？" class="headerlink" title="Hexo是什么？"></a>Hexo是什么？</h2><p>Hexo是一个快速、简洁且高效的博客框架，尤其对于新手十分友好，其实没有前端能力也可以随心、快速地搭建自己的博客网站。如果这些描述不够直观，我将展示示例博客。</p>
-<a class="button  center large" target="_blank" rel="noopener" href='https://chandery.chat/' title='示例展示'><i class='fa-solid fa-binoculars'></i> 示例展示</a>
-
-<p>示例博客中的所有内容都是使用Hexo搭建，使用的主题是Redefine</p>
-<p>这里奉上<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" >Hexo官方网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
-<h2 id="安装前置"><a href="#安装前置" class="headerlink" title="安装前置"></a>安装前置</h2><p>在安装Hexo之前我们需要先配好下列环境：</p>
+            <h2 id="图床是什么-为什么需要图床"><a href="#图床是什么-为什么需要图床" class="headerlink" title="图床是什么&为什么需要图床"></a>图床是什么&amp;为什么需要图床</h2><p>“图床”是一个网络术语，它指的是一种用于存储和托管图片的在线服务。通常情况下，图床允许用户上传图片文件，并提供一个链接或者嵌入代码，使得用户可以在网页或者论坛等地方方便地分享和展示这些图片。</p>
+<p>图床服务的主要功能包括：</p>
+<ol>
+<li><strong>图片存储：</strong> 用户可以将图片上传到图床服务器上，服务器会为每张图片分配一个唯一的URL用于访问。</li>
+<li><strong>图片托管：</strong> 图床服务将用户上传的图片存储在自己的服务器上，用户可以通过链接在任何需要的地方引用这些图片，比如在网页、博客、论坛等。</li>
+<li><strong>图片分享：</strong> 用户可以通过图床服务生成的链接方便地分享图片，比如通过社交媒体、即时通讯工具等。</li>
+<li><strong>外链支持：</strong> 图床服务通常支持外链，允许用户将图片嵌入到第三方网页或者应用程序中。</li>
+</ol>
+<p>图床服务的使用场景包括但不限于：</p>
 <ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/en" >Node.js <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://git-scm.com/" >Git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>在论坛或者社交媒体上分享图片。</li>
+<li>将图片嵌入到个人博客或者网站中。</li>
+<li>在在线商店或者拍卖网站上展示商品图片。</li>
+<li>在应用程序中存储和展示图片资源。</li>
 </ul>
-<p>安装方式和过程在不同的操作系统上是不同的，在此就不赘述了。读者可以自行查阅对应操作系统的资料。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>必备的环境配置结束之后即可使用npm安装Hexo</p>
-<p>在终端输入下列代码以安装Hexo</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h2 id="建立本地仓库和Github仓库"><a href="#建立本地仓库和Github仓库" class="headerlink" title="建立本地仓库和Github仓库"></a>建立本地仓库和Github仓库</h2><p>这里解释一下本地仓库和Github仓库的作用</p>
-<p>本地仓库是用来存放Hexo相关的源文件（如js脚本、后续主题的源文件包、模块包之类的）</p>
-<p>Github仓库里的内容即博客网站的Html、css、js源文件，是经过用户配置后的Hexo生成出来的</p>
-<p>下面是仓库建立步骤</p>
-<div class="tabs" id="tab-local-and-github"><ul class="nav-tabs"><li class="tab active"><a class="#local-and-github-1">Github Repo</a></li><li class="tab"><a class="#local-and-github-2">Local Repo</a></li></ul><div class="tab-content"><div class="tab-pane active" id="local-and-github-1"><p>在个人的github中新建仓库，命名必须按一下格式</p>
-  <div class="note p-4 mb-4 rounded-small info">
-    <p><strong>{username}.github.io</strong></p>
-
-  </div>
-
-<p>后续仓库建立之后，直接访问{username}.github.io即可访问个人博客。</p>
-<p><em>当然也可以使用域名绑定，这个后面再说</em></p>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/16/image2cdfde4f2625c86f.png"
-                      style="zoom:80%;" 
-                >
-
-<p>创建成功之后点击“code”，选择”HTTPS”或者“SSH”都可以，但是要注意的是使用SSH与github进行通信需要配置ssh-key，这个在这里就不过多赘述了，不清楚的读者可以通过SEARCH解决。</p>
-<p>复制这个地址，后续在本地仓库配置中使用。</p></div><div class="tab-pane" id="local-and-github-2"><p>在本地目录下新建一个文件夹，在文件夹下打开终端，初始化Hexo</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></div>
-
-<p>Hexo会自动生成相应的配置文件：</p>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/16/imagedd4a06cbebeedc6a.png"
-                      style="zoom: 80%;" 
-                >
-
-<p>其中在使用时需要修改的是</p>
+<p>一些知名的图床服务包括 七牛云、GitHub、微博图床、腾讯云等。</p>
+<p>鉴于前面我们说过用GitHub搭建博客，现在依旧使用GitHub搭建图床</p>
+<h2 id="上传工具"><a href="#上传工具" class="headerlink" title="上传工具"></a>上传工具</h2><p>这里推荐PicGO，一个纯免费的上传工具，支持很多不同的图床</p>
+<p>可以从这里访问并下载：<a class="link" target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here">PicGo is Here | PicGo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913190959777.png" alt="image-20240913190959777"></p>
+<p>值得注意的是，PicGo需要node.js</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191046971.png" alt="image-20240913191046971"></p>
+<h2 id="然后是搭建GitHub图床仓库"><a href="#然后是搭建GitHub图床仓库" class="headerlink" title="然后是搭建GitHub图床仓库"></a>然后是搭建GitHub图床仓库</h2><p>首先在Github新建仓库</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191154778.png" alt="image-20240913191154778"></p>
+<p>然后在Settings–Developer settings–Tokens–Generate new token</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191509028.png" alt="image-20240913191509028"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191446925.png" alt="image-20240913191446925"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191616379.png" alt="image-20240913191616379"></p>
+<p>然后填写即可，这个token是用于授权picGo对你的仓库进行操作</p>
+<p>注意repo的项一定要全选</p>
+<p>生成成功后，需要保存好token，因为不会显示第二次</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191644112.png" alt="image-20240913191644112"></p>
+<h2 id="PicGO内设置"><a href="#PicGO内设置" class="headerlink" title="PicGO内设置"></a>PicGO内设置</h2><p>在PicGO中选择Github图床，然后设置为默认，接着填写设置</p>
 <ul>
-<li>_config.yml  用于基本的设置</li>
-<li>_config.{themes}.yml 后续选择主题后得到的针对主题的设置</li>
-<li>source文件夹中的文件，用于发布博客、上传图片等</li>
-<li>scaffolds文件夹中的模板文件，用于自定义新建的不同类型的文件的模板</li>
+<li>配置名随便写</li>
+<li>仓库名格式为username/reponame</li>
+<li>分支名默认是master，要改为main，因为github新建仓库默认的主分支叫main，如果自定义了按照自己定义的主分支名字写</li>
+<li>Token用刚才生成的token</li>
+<li>储存路径可写可不写，写了之后在上传后会在仓库中生成文件夹，保存在文件夹中</li>
+<li>域名不需要填写</li>
 </ul>
-<p>node_modules文件夹中存放着下载的模块</p>
-<p>public文件夹中是当前状态下hexo会生成的各类文件，即使修改，在下一次hexo生成中也会被覆盖掉</p>
-<p>然后打开_config.yml，我们需要进行一些基本的配置，详细的介绍可以参考Hexo的官方文档<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration" >配置 | Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
-<p>为了能够我们建立的github仓库连接，我们需要使用deploy，使用下列指令进行安装：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
-
-<p>然后在_config.yml的最后添加这样的代码：</p>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:Chandery/chandery.github.io.git</span> <span class="comment">#这是示例！要用我们刚才建好的github仓库的ssh或者https链接</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
-
-<p>即可实现与github的信息通信</p></div></div></div>
-
-
-
-<h2 id="一些Hexo的常用命令"><a href="#一些Hexo的常用命令" class="headerlink" title="一些Hexo的常用命令"></a>一些Hexo的常用命令</h2><p>hexo的好处之一在于可以使用简单的命令进行博客的创建、编辑、预览、发布等。</p>
-
-  <div class="note p-4 mb-4 rounded-small warning">
-    <p>注意，所有的命令都要在本地仓库下打开终端才能运行</p>
-
-  </div>
-
-<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>命令如下：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] [name]</span><br></pre></td></tr></table></figure></div>
-
-<p>其中，layout表示新建的文件类型，在hexo中默认有三种文件类型：</p>
-<ul>
-<li>post</li>
-<li>page</li>
-<li>draft</li>
-</ul>
-<p>其中默认的layout（不写的情况）是post，这个可以在_config.yml中修改</p>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># File name of new posts</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure></div>
-
-<p><em>draft类别可以新建一个草稿，具体的用法参见Hexo官方文档。</em></p>
-<h3 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></div>
-
-<p>该命令可以把public文件夹中的文件都删除，方便下一次的生成</p>
-<h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">或者</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>该命令是根据你的修改继续项目生成</p>
-<h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>在生成以后可以本地生成localhost进行预览</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line">或者</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>这个命令会生成</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></div>
-
-<p>可以实时查看预览</p>
-<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line">或者</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>这个命令会把最后一次生成的内容打包成网页源文件推到github仓库上</p>
-<h3 id="一些args"><a href="#一些args" class="headerlink" title="一些args"></a>一些args</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br><span class="line">hexo s -g</span><br></pre></td></tr></table></figure></div>
-
-<p>可以在发布(预览)之前自动生成</p>
-<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>使用命令创建一篇新的博客之后可以在source文件夹的_post中找到新建的.md文件，直接打开进行编辑即可。</p>
-<p>值得注意的是，如果要插入图片，最好是使用外链（笔者推荐）</p>
-<p>当然也有类似hexo-assert-img这样的插件，可以实现图片的地址转换，但是好像并不是适配每个人的环境，因此如果不懂js编程的读者建议使用外链。</p>
-<p>笔者使用的外链代理网站是<a class="link"   target="_blank" rel="noopener" href="https://postimage.me/" >https://postimage.me/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>  </p>
-<p>纯免费，只需要每次上传上去然后复制源文件的地址即可。（因为服务器在海外，会有一点加载延迟，但是可以接受）</p>
-<h2 id="主题的选择"><a href="#主题的选择" class="headerlink" title="主题的选择"></a>主题的选择</h2><p><a class="link"   target="_blank" rel="noopener" href="https://hexo.io/themes/" >Themes | Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>可以在Hexo官方的主题网站中找到自己喜欢的主题，然后阅读它的文档</p>
-<p>本主题是<a class="link"   target="_blank" rel="noopener" href="https://redefine-docs-v1.ohevan.com/" >hexo-theme-redefine Documentation | hexo-theme-redefine (ohevan.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>首先要购买自己喜欢的域名，这里以阿里云为例。</p>
-<p><em>为了领取15年的ssl证书，我们需要修改DNS服务器到cloudflare中</em></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/20/image.png"
-                      alt="image"
-                ></p>
-<p><em>具体可以自行SEARCH获得</em></p>
-<p>获得域名之后，如何绑定到我们的网站上？</p>
-<p>首先在仓库中建立一个CNAME的文件（不要有任何的后缀名），然后在里面写上购买好的域名</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/20/image9ffb8cc57f98f0cc.png"
-                      alt="image1"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/20/imagee2ae4de45c0dd550.png"
-                      alt="image3"
-                ></p>
-<p>然后在域名所在的服务器上添加目标DNS即可</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/20/imagec24f190030fb64db.png"
-                      alt="image4"
-                ></p>
-<p>然后在仓库的settings，找到pages，在custom domain的位置输入域名，然后等待check即可，保存成功后再勾选底下的强制https即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/20/imagebe7236e46f91aa7f.png"
-                      alt="image"
-                ></p>
-<p>在设置的过程中会有DNS传播的延时，因此没有成功可以等待一会再尝试。</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h3><p>成功了之后，会出现一个问题，每次hexo d之后仓库的文件都会被覆盖，CNAME文件就没了，每次还得自己手动添加，这是极其麻烦的。</p>
-<p><strong>解决办法：</strong></p>
-<p>既然每次deploy上去之后都会覆盖，那能不能让CNAME文件在每次deploy的时候都作为博客源文件的一部分被push上去呢？基于这个想法，我们只需要在本地hexo根目录的地方source里面创建一个CNAME文件，与仓库中同样操作即可。这样每次deploy上去之后就会自动覆盖之前的，域名链接也不用重新设置了。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://postimage.me/images/2024/06/20/image7247c6e4c4750acd.png"
-                      alt="image"
-                ></p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>到这里一个简单的Hexo使用教程就结束了，上手起来真的很容易，投入很少的精力就可以做出精美的博客。</p>
-<p>一起来试试吧！</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913191857137.png" alt="image-20240913191857137"></p>
+<h2 id="在Typora中设置"><a href="#在Typora中设置" class="headerlink" title="在Typora中设置"></a>在Typora中设置</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913192430416.png" alt="image-20240913192430416"></p>
+<p>看到上传服务处，如果以上设置结束，可以点击验证图片上传选项，看看能否上传成功并且返回正确的url</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913192530136.png" alt="image-20240913192530136"></p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>在使用Typora编辑博客的时候直接粘贴图片，这时候选项处会跳出来一些选项，选其中的“上传图片”即可</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913192650075.png" alt="image-20240913192650075"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>下载PicGO图床管理工具</li>
+<li>搭建Github图床仓库</li>
+<li>配置PicGO设置</li>
+<li>配置Typora上传选项</li>
+<li>测试上传是否有效</li>
+</ol>
 
         </div>
 
@@ -902,18 +907,18 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 如何基于Hexo搭建自己的github博客？</li>
+        <li><strong>Title:</strong> Github+PicGO+Typora搭建方便快捷的图床方案</li>
         <li><strong>Author:</strong> Chandery</li>
         <li><strong>Created at
-                :</strong> 2024-06-16 17:21:40</li>
+                :</strong> 2024-09-13 18:59:10</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-20 23:55:22
+                    :</strong> 2024-09-13 19:28:43
             </li>
         
         <li>
-            <strong>Link:</strong> https://chandery.chat/2024/06/16/如何基于Hexo搭建自己的github博客？/
+            <strong>Link:</strong> https://chandery.chat/2024/09/13/Github-PicGO-Typora搭建方便快捷的图床方案/
         </li>
         <li>
             <strong>
@@ -946,29 +951,14 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/06/21/%E5%9F%BA%E4%BA%8EBCI-competitionIV-dataset2b-%E7%9A%84%E8%84%91%E7%94%B5%E6%B3%A2%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">基于BCI competitionIV dataset2b 的脑电波图像分类任务</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/06/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8C%87%E6%A0%87/"
+                        href="/2024/09/09/Pytorch-Lightning%E4%BB%8B%E7%BB%8D%E5%92%8C%E8%A1%A5%E5%85%85/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">机器学习中的几个常见的指标</span>
+                                <span class="post-nav-title-item">Pytorch Lightning介绍和补充</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -1031,8 +1021,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">如何基于Hexo搭建自己的github博客？</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Hexo是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%92%8CGithub%E4%BB%93%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">建立本地仓库和Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9BHexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">一些Hexo的常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">5.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4"><span class="nav-number">5.2.</span> <span class="nav-text">清除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90"><span class="nav-number">5.3.</span> <span class="nav-text">生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">5.4.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0"><span class="nav-number">5.5.</span> <span class="nav-text">上传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9Bargs"><span class="nav-number">5.6.</span> <span class="nav-text">一些args</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">6.</span> <span class="nav-text">写博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">7.</span> <span class="nav-text">主题的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A"><span class="nav-number">8.</span> <span class="nav-text">域名绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PS"><span class="nav-number">8.1.</span> <span class="nav-text">PS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD"><span class="nav-number">9.</span> <span class="nav-text">后续</span></a></li></ol>
+        <div class="page-title">Github+PicGO+Typora搭建方便快捷的图床方案</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BA%8A%E6%98%AF%E4%BB%80%E4%B9%88-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">图床是什么&amp;为什么需要图床</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">上传工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E6%98%AF%E6%90%AD%E5%BB%BAGitHub%E5%9B%BE%E5%BA%8A%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">然后是搭建GitHub图床仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PicGO%E5%86%85%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">PicGO内设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8Typora%E4%B8%AD%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">在Typora中设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">如何使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol>
 
     </div>
 </div>
