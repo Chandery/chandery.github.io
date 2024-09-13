@@ -425,4 +425,28 @@
         <tag>博客搭建</tag>
       </tags>
   </entry>
+  <entry>
+    <title>DCGAN学习笔记</title>
+    <url>/2024/09/13/DCGAN%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Chandery/imgs-PicGO/main/imgs/image-20240913194016060.png" alt="image-20240913194016060"></p>
+<p>学习生成方向一定绕不开的一定是在这个领域的开山之作GAN，于是跟着b站李沐老师一起读了这篇论文，醍醐灌顶。为了加深对其中数学原理的理解和加深记忆，特此记录。</p>
+<p>这里挂上论文原文和李沐老师的视频链接</p>
+<a class="button  regular" href="https://proceedings.neurips.cc/paper_files/paper/2014/file/5ca3e9b122f61f8f06494c97b1afccf3-Paper.pdf" title="论文链接"><i class="fa-solid fa-scroll"></i> 论文链接</a>
+
+<a class="button  regular" href="https://www.bilibili.com/video/BV1rb4y187vD/?spm_id_from=333.880.my_history.page.click" title="视频链接"><i class="fa-solid fa-play-circle"></i> 视频链接</a>
+
+<h2 id="一个关于GAN起名的有趣的背景故事"><a href="#一个关于GAN起名的有趣的背景故事" class="headerlink" title="一个关于GAN起名的有趣的背景故事"></a>一个关于GAN起名的有趣的背景故事</h2><p>当年一作Ian在选择名字的时候，有若干个名字可以选，GAN是其中一个，有一个人告诉他说GAN在中文里面叫做干，和英文里F开头的那个词有点像，但是意义上丰富多了，然后Ian说“这个好！就它了”，因此就有了GAN这个名字。</p>
+<p>当然这个故事也是道听途说，大家不必当真。不过GAN这个名字也很形象的描述了这个网络的特点，让我们中国人更容易理解其特点，算是一个很有趣的巧合。</p>
+<p>接下来先用通俗的语言解释GAN网络在做的事，稍后进行理论的阐述和数学原理，然后再对DCGAN进行学习记录，和代码复现。</p>
+<h2 id="GAN在做什么？"><a href="#GAN在做什么？" class="headerlink" title="GAN在做什么？"></a>GAN在做什么？</h2><p>GAN的全称叫做生成对抗网络(Generative Adversarial Nets)。生成很好理解，这个网络的目的是实现生成；对抗，也是这个网络的精髓所在，也是为什么说“干”很能体现其精髓。</p>
+<p>这里对其原理进行一个通俗的阐述：</p>
+<p>为了达到生成的目的，我们需要一个生成器（Generator），这个模块负责完成生成。GAN的生成器对</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>技术相关</tag>
+      </tags>
+  </entry>
 </search>
