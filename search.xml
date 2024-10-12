@@ -556,4 +556,186 @@
         <tag>技术相关</tag>
       </tags>
   </entry>
+  <entry>
+    <title>vim学习笔记</title>
+    <url>/2024/10/10/vim%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="Vim简介"><a href="#Vim简介" class="headerlink" title="Vim简介"></a>Vim简介</h2><p>Vim是从vi发展出来的一个文本编辑器。其代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。和Emacs并列成为类Unix系统用户最喜欢的编辑器。</p>
+<p>Vim适用于纯文本的编辑（代码、markdown文件、LaTeX源码等）</p>
+<p>优势：</p>
+<ul>
+<li>高效的移动</li>
+<li>高效的编辑</li>
+<li>高效的批量处理</li>
+</ul>
+<p><em><strong>“Edit Test at the Speed of Thought”</strong></em></p>
+<img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/dnvim2.jpg" alt="img" style="zoom:50%;">
+
+<h2 id="Vim基础知识和学习路线"><a href="#Vim基础知识和学习路线" class="headerlink" title="Vim基础知识和学习路线"></a>Vim基础知识和学习路线</h2><blockquote>
+<p>强烈建议去b站看up bililbili@郁结YuJie关于vim的教程，做的非常的好！以下的总结是对其讲述内容的总结</p>
+</blockquote>
+<img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/Vim%EF%BC%9A%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png" alt="Vim：思维导图" style="zoom:150%;">
+
+<h2 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h2><p>Vim的操作有四种模式：</p>
+<ol>
+<li>Normal模式：默认进入的模式，也是最常用的模式</li>
+<li>Insert模式：插入模式，像正常的文本编辑器一样输入</li>
+<li>Command模式：命令模式，在底部输入命令，可以完成很多批量的功能</li>
+<li>Visual模式：可视模式，对文本进行选择</li>
+</ol>
+<h3 id="Normal模式：基础移动"><a href="#Normal模式：基础移动" class="headerlink" title="Normal模式：基础移动"></a>Normal模式：基础移动</h3><ul>
+<li><code>hjkl</code>：上下左右</li>
+<li><code>gg</code>：跳到第一行</li>
+<li><code>G</code>：跳到最后一行</li>
+<li><code>&lt;Ctrl-u&gt;/&lt;Ctrl-b&gt;</code>：往上翻半页/一页（Up / Backward）</li>
+<li><code>&lt;Ctrl-d&gt;/&lt;Ctrl-f&gt;</code>：往下翻半页/一页（Down / Forward）</li>
+<li><code>{lineon}gg</code>：跳到第 <code>lineon</code>行</li>
+<li><code>zz/zt/zb</code>：光标行设置为 屏幕居中/屏幕第一行/屏幕最后一行  （Zone /  Zone Top / Zone Button）</li>
+</ul>
+<h3 id="进入Insert模式"><a href="#进入Insert模式" class="headerlink" title="进入Insert模式"></a>进入Insert模式</h3><p>Normal模式下通过特定的命令进入Insert模式</p>
+<ul>
+<li><code>i</code>：当前光标之前开始插入（insert）</li>
+<li><code>a</code>：当前光标之后开始插入（append）</li>
+<li><code>o</code>：下方插入新的一行，然后开始输入</li>
+<li><code>s</code>：删除当前光标的字符，然后开始输入</li>
+<li><code>I</code>：在本行的开头开始输入</li>
+<li><code>A</code>：在本行的结尾开始输入</li>
+<li><code>O</code>：上方插入新的一行，开始输入</li>
+<li><code>S</code>：删除当前行，开始输入</li>
+</ul>
+<h3 id="进入Command模式"><a href="#进入Command模式" class="headerlink" title="进入Command模式"></a>进入Command模式</h3><p>Normal模式下输入<code>:</code>进入Command模式</p>
+<ul>
+<li><code>:w</code> 保存当前文件</li>
+<li><code>:q</code> 退出</li>
+<li><code>:q!</code> 放弃当前更改，然后退出</li>
+<li><code>:wq</code> 保存当前更改，然后退出</li>
+<li><code>h {command}</code> 显示关于命令的帮助</li>
+<li><code>&lt;Esc&gt;</code> 回到Normal模式</li>
+</ul>
+<h3 id="进入-Visual-模式"><a href="#进入-Visual-模式" class="headerlink" title="进入 Visual 模式"></a>进入 Visual 模式</h3><p><strong>Normal 模式下按v进入可视模式</strong><br><strong>进入可视模式后可以用 Normal 模式下的移动命令选择文本</strong></p>
+<ul>
+<li>可视模式下<code>x</code>/<code>y</code>：剪切/复制；回到 Normal 模式下<code>p</code>：粘贴</li>
+<li>Normal 模式下按<code>&lt;V&gt;</code>进入行可视模式，一次选中一整行，在需要选中多行时很方便</li>
+<li><code>&lt;Esc&gt;</code>回到 Normal 模式</li>
+</ul>
+<h2 id="二、移动和编辑"><a href="#二、移动和编辑" class="headerlink" title="二、移动和编辑"></a>二、移动和编辑</h2><p>简单的<code>hjkl</code>无法实现快速的移动，因此我们需要一些更加高效的移动</p>
+<h3 id="基于单词的移动"><a href="#基于单词的移动" class="headerlink" title="基于单词的移动"></a>基于单词的移动</h3><ul>
+<li><code>w</code>：word，跳转到下一处单词的开头</li>
+<li><code>b</code>：back，跳转到上一处单词的开头</li>
+<li><code>e</code>：end，跳转到下一处单词的结尾</li>
+<li><code>ge</code>：<code>e</code>的反向版本，跳转到上一处单词的结尾</li>
+</ul>
+<p><code>wbe</code>大写版本<code>WBE</code>对应的单词是连续的非空字符</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/image-20241010213047227.png" alt="image-20241010213047227"></p>
+<h3 id="基于搜索的移动"><a href="#基于搜索的移动" class="headerlink" title="基于搜索的移动"></a>基于搜索的移动</h3><h5 id="行内搜索："><a href="#行内搜索：" class="headerlink" title="行内搜索："></a>行内搜索：</h5><ul>
+<li><code>f&lt;char&gt;/t&lt;char&gt;</code>：跳转到本行下一个 <code>char</code>字符出现处/前</li>
+<li><code>;/,</code>：快速向后/向前重复 <code>ft</code> 查找</li>
+<li><code>F&lt;char&gt;/T&lt;char&gt;</code>：跳转到本行上一个 <code>char</code>字符出现处/前（向前搜索）</li>
+</ul>
+<h5 id="文件中搜索："><a href="#文件中搜索：" class="headerlink" title="文件中搜索："></a>文件中搜索：</h5><ul>
+<li><code>/&lt;pattern&gt;</code>：跳转到本文件中下一个 <code>pattern</code>出现的地方</li>
+<li><code>?&lt;pattern&gt;</code>：跳转到本文件中上一个 <code>pattern</code>出现的地方</li>
+<li><code>pattern</code>可以是正则表达式</li>
+<li><code>*</code>：跳转到本文件中下一个和当前光标下的单词相同的单词处</li>
+<li><code>nN</code>：快速重复 <code>/</code>查找  （<code>n</code>：正向找，<code>m</code>：反向找）</li>
+</ul>
+<h3 id="基于标记的移动"><a href="#基于标记的移动" class="headerlink" title="基于标记的移动"></a>基于标记的移动</h3><ul>
+<li><code>m{mark}</code>：把当前位置标记为 <code>mark</code></li>
+<li><code>'{mark}</code>：跳转到名为 <code>mark</code>的标记位置</li>
+</ul>
+<p><code>mark</code>是<code>a~z</code>的字符</p>
+<p>内置标记：</p>
+<ul>
+<li><code>''</code>：回到上次跳转前的位置</li>
+<li><code>'.</code>：回到上次修改的位置</li>
+<li><code>'^</code>：回到上次插入的位置</li>
+</ul>
+<blockquote>
+<p>记住一个就可以 <code>mm</code>，方便按，然后修改完别的地方按 <code>''</code>即可回到标记处</p>
+</blockquote>
+<h3 id="一些实用的跳转"><a href="#一些实用的跳转" class="headerlink" title="一些实用的跳转"></a>一些实用的跳转</h3><ul>
+<li><code>^/$</code>：跳转到本行的开始/结尾（分别对应shift+6和4，其中6是开始，4是结尾，<em>和按的时候是反过来</em>）</li>
+<li><code>%</code>：跳到匹配的配对符（括号，大括号等）处</li>
+</ul>
+<h3 id="简单的公式：Operation-Motion-Action"><a href="#简单的公式：Operation-Motion-Action" class="headerlink" title="简单的公式：Operation+Motion=Action"></a>简单的公式：Operation+Motion=Action</h3><p><code>{operation}{motion}</code>：一次编辑操作</p>
+<p>常见的：</p>
+<ul>
+<li><code>c</code>：代表”change”，删除内容并进入插入模式</li>
+<li><code>d</code>：代表”delete”，删除</li>
+<li><code>y</code>：代表”yank”，复制</li>
+<li><code>v</code>：代表”visual”，选中文本，进入可视模式</li>
+</ul>
+<p>例如：</p>
+<ul>
+<li><code>dgg</code>：从当前位置删除到第一行</li>
+<li><code>ye</code>：复制到单词结尾</li>
+<li><code>d$</code>：删除到行结尾</li>
+<li><code>dt;</code>：删除当前位置到分号之前的内容</li>
+</ul>
+<p>“操作符+移动”是很重要的操作逻辑，类似鼠标拖动之后操作</p>
+<p>大部分操作符连续按两次（<code>cc/yy/dd</code>）：将其作用在一行上</p>
+<p>例如 <code>dd</code>：删除一行</p>
+<h3 id="重复操作"><a href="#重复操作" class="headerlink" title="重复操作"></a>重复操作</h3><ul>
+<li><code>.</code>：重复上次的操作</li>
+<li><code>u</code>：撤回 （相当于ctrl+z）</li>
+<li><code>&lt;Ctrl-r&gt;</code>：重做 （相当于ctrl+y）</li>
+</ul>
+<p><code>.</code>省去了重复输入命令，大大提高效率</p>
+<h3 id="批量操作：数字-动作"><a href="#批量操作：数字-动作" class="headerlink" title="批量操作：数字+动作"></a>批量操作：数字+动作</h3><p><code>{count}{action}</code>：重复 <code>count</code>次 <code>action</code>操作</p>
+<p>比如移动，编辑</p>
+<ul>
+<li><code>4j</code>：向下移动四行</li>
+<li><code>3dw</code>：向后删除三个单词</li>
+<li><code>2yy</code>：复制两行</li>
+<li><code>4p</code>：粘贴4次</li>
+</ul>
+<p><code>.</code>操作可以直观地看到每一次的变化，在合适的时候停下来</p>
+<p>数字+动作则需要预先知道动作的次数</p>
+<h3 id="技巧：使用相对行号确定移动范围"><a href="#技巧：使用相对行号确定移动范围" class="headerlink" title="技巧：使用相对行号确定移动范围"></a>技巧：使用相对行号确定移动范围</h3><p><code>:set relativenumber</code>：开启相对行号</p>
+<p><code>:set norelativenumber</code>：关闭相对行号</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><code>[count]{operator}{motion}</code> 操作逻辑</p>
+<h2 id="三、文本对象操作"><a href="#三、文本对象操作" class="headerlink" title="三、文本对象操作"></a>三、文本对象操作</h2><p>介绍 <code>{operator}{textobjects}</code>操作逻辑</p>
+<p><code>{textobjects}</code>：语义化的文本片段</p>
+<p>常见的对象：</p>
+<ul>
+<li><code>w/W</code> ，<code>s</code>，<code>p</code>：单词、句子、段落</li>
+<li><code>(</code>/<code>)</code>,<code>[</code>/<code>]</code>,<code>{</code>/<code>}</code>,<code>&lt;</code>/<code>&gt;</code>,<code>'</code>/<code>"</code>：配对符定义的对象</li>
+</ul>
+<p><code>i</code>表示inner；<code>a</code>代表append，额外包括周围的空格或者配对符</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/image-20241011213652454.png" alt="image-20241011213652454"></p>
+<p>文本对象提供了为文本赋予了结构化的含义，因此可以以一个语义对象作为操作单元</p>
+<p><code>[count]{operator}{textobjects}</code></p>
+<ul>
+<li><code>diw</code>：删除一个单词</li>
+<li><code>ci(</code>：修改小括号内部</li>
+<li><code>yi{</code>：复制大括号内部</li>
+</ul>
+<h3 id="textobjects-VS-motion"><a href="#textobjects-VS-motion" class="headerlink" title="textobjects VS motion"></a>textobjects VS motion</h3><p><code>{operator}{motion}</code>与<code>{operator}{textobjects}</code></p>
+<p>解耦了操作与操作的对象，大大提升了操作的效率</p>
+<ul>
+<li><code>motion</code>是能够移动光标的指令，可以独立使用（如<code>wbe</code>）</li>
+<li>文本对象只能跟在 <code>operator</code>后面，不能独立使用（如<code>iw</code>）</li>
+<li><code>motion</code>通过光标的移动确定 <code>operator</code>的作用范围，范围更加灵活但是不够明确</li>
+<li><code>textobjects</code>则是显示地指定操作的对象，范围明确</li>
+</ul>
+<h3 id="一些操作符的补充"><a href="#一些操作符的补充" class="headerlink" title="一些操作符的补充"></a>一些操作符的补充</h3><ul>
+<li><code>gu</code>/<code>gU</code>/<code>g~</code>：操作符（因此后面要接textobjects或者motion），转小写/转大写/翻转大小写</li>
+<li><code>J</code>：join，连接两行</li>
+<li><code>&lt;</code>/<code>&gt;</code>：左右缩进（连按两下可以本行缩进）</li>
+</ul>
+<blockquote>
+<p>建议：让你的命令更加模块化</p>
+<p>尽量让你的命令更加模块化，具有清晰的含义和作用范围，以便于与 <code>.</code>等命令协同</p>
+<p>例如：<code>daw</code>比 <code>dw</code>具有更加清楚的语义，也更模块化</p>
+<p>练习技巧：用 <code>v</code>先可视化修改的范围</p>
+<p>一开始不熟练，可能不确定 <code>motion</code>或 <code>textobjects</code>具体覆盖了哪部分文本，可以先用 <code>v{motion}/v{textobjects}</code>将其选中，再执行 <code>c/d/y</code>等操作</p>
+<p>但是熟练后，尽可能直接使用完整的命令继续宁操作，因为相比于 <code>viwd</code>，<code>diw</code>更加模块化，也更容易进行重复操作</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>技术相关</tag>
+      </tags>
+  </entry>
 </search>
