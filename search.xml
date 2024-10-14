@@ -767,10 +767,10 @@
 </blockquote>
 </li>
 </ol>
-<img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/image-20241015024546797.png" alt="image-20241015024546797" style="zoom:50%;">
+<img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/image-20241015024546797.png" alt="image-20241015024546797" style="zoom: 80%;">
 
 <h2 id="2-VAE（Variational-Auto-Encoder）"><a href="#2-VAE（Variational-Auto-Encoder）" class="headerlink" title="2 VAE（Variational Auto Encoder）"></a>2 VAE（Variational Auto Encoder）</h2><p>变分自编码器的实现逻辑就是着重解决上述的第二个硬伤缺陷，既然离散的值没有办法保证平滑，那就把每个特征都记作一个分布，分布的移动之间就是连续的。</p>
-<img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/image-20241015025325650.png" alt="image-20241015025325650" style="zoom:50%;">
+<img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/img/image-20241015025325650.png" alt="image-20241015025325650" style="zoom: 80%;">
 
 <p><strong>“A variational autoencoder can be defined as being an autoencoder whose training is regularized to avoid overfitting and ensure that the latent space has good properties that enable generative process.”</strong></p>
 <p>VAE的出发点和AE的是一样的</p>
