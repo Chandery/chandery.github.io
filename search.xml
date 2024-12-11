@@ -960,4 +960,24 @@
         <tag>技术相关</tag>
       </tags>
   </entry>
+  <entry>
+    <title>超模工具记录——uv和ruff</title>
+    <url>/2024/12/11/%E8%B6%85%E6%A8%A1%E5%B7%A5%E5%85%B7%E8%AE%B0%E5%BD%95%E2%80%94%E2%80%94uv%E5%92%8Cruff/</url>
+    <content><![CDATA[<h1 id="UV"><a href="#UV" class="headerlink" title="UV"></a>UV</h1><blockquote>
+<p>UV是Astral团队开发的python包管理工具，功能十分强大。<br>在github上拥有着31.2k的star（截止2024.12）</p>
+</blockquote>
+<img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241210225305.png" alt="image.png" style="zoom:50%;">
+uv的设计主要是用于包管理，使用venv等虚拟环境，或者轻量化的代码不使用虚拟环境的时候便捷运行代码。uv的设计并没有集成conda的接口，但是集成了pip的接口，这给我们使用conda环境提供了可能。以下展示uv和conda的配合使用。
+
+<h2 id="uv和conda配合使用"><a href="#uv和conda配合使用" class="headerlink" title="uv和conda配合使用"></a>uv和conda配合使用</h2><p>uv凭什么比原生pip快？<br>不同于pip批量下载时的同步请求，使用uv批量下载包的时候请求是异步的。这使得多个文件下载得以并行。和pip相同，uv也有cache，功能相同。<br><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241210220917.png" alt="image.png" style="zoom:50%;"><br>另外，使用体验起来发现，使用uv下载时install步骤非常快，我猜测这得益于其异步请求、下载和安装的机制，因此安装的过程只取决于流程最长的包。<br><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241210220942.png" alt="image.png" style="zoom:50%;"><br>和pip相同，uv也有cache，功能相同。<br><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241210223755.png" alt="image.png" style="zoom:50%;"></p>
+<h2 id="对比实验"><a href="#对比实验" class="headerlink" title="对比实验"></a>对比实验</h2><p>这里做了关于uv、pip两种下载方式下载cuda版本torch时的对比实验。<br><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241210224240.png" alt="image.png" style="zoom:50%;"><br><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241210225138.png" alt="image.png" style="zoom:50%;"><br>可以看到uv比pip整整快了一分多钟。（且在反复测试过程中，最后一次使用pip下载的时候网速突然增大，实际结果应当是快两分钟左右。）在只有寥寥几个下载文件的时候就快出一分多钟来，可见下载量大的时候其增益效果明显。</p>
+<h2 id="pip接口"><a href="#pip接口" class="headerlink" title="pip接口"></a>pip接口</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241210235249.png" alt="image.png"><br>其中uv pip sync和pip install -r requirements.txt不同，它是删掉环境中在req中没有的包，安装req中的包，这点要注意。<br>值得注意的是<code>uv pip tree</code>命令，可以展示所有包之间的依赖关系，非常的好用。想要查看单个包的信息（版本、位置、依赖关系）可以使用 <code>uv pip show {package}</code><br><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241211004322.png" alt="image.png" style="zoom:50%;"><br><img lazyload="" src="/images/loading.svg" data-src="https://imgs-chan-1329526870.cos.ap-beijing.myqcloud.com/20241211004338.png" alt="image.png" style="zoom:50%;"></p>
+<h1 id="ruff"><a href="#ruff" class="headerlink" title="ruff"></a>ruff</h1>]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>技术相关</tag>
+      </tags>
+  </entry>
 </search>
